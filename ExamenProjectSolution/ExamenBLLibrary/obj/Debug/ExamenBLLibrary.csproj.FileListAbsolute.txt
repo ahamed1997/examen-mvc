@@ -1,0 +1,11 @@
+C:\Users\ahamed.thamimul\source\repos\ExamenProjectSolution\ExamenBLLibrary\bin\Debug\ExamenBLLibrary.dll
+C:\Users\ahamed.thamimul\source\repos\ExamenProjectSolution\ExamenBLLibrary\bin\Debug\ExamenBLLibrary.pdb
+C:\Users\ahamed.thamimul\source\repos\ExamenProjectSolution\ExamenBLLibrary\bin\Debug\ExamenDALLibrary.dll
+C:\Users\ahamed.thamimul\source\repos\ExamenProjectSolution\ExamenBLLibrary\bin\Debug\ExamenUserLibrary.dll
+C:\Users\ahamed.thamimul\source\repos\ExamenProjectSolution\ExamenBLLibrary\bin\Debug\ExamenDALLibrary.pdb
+C:\Users\ahamed.thamimul\source\repos\ExamenProjectSolution\ExamenBLLibrary\bin\Debug\ExamenUserLibrary.pdb
+C:\Users\ahamed.thamimul\source\repos\ExamenProjectSolution\ExamenBLLibrary\obj\Debug\ExamenBLLibrary.csprojAssemblyReference.cache
+C:\Users\ahamed.thamimul\source\repos\ExamenProjectSolution\ExamenBLLibrary\obj\Debug\ExamenBLLibrary.csproj.CoreCompileInputs.cache
+C:\Users\ahamed.thamimul\source\repos\ExamenProjectSolution\ExamenBLLibrary\obj\Debug\ExamenBLLibrary.csproj.CopyComplete
+C:\Users\ahamed.thamimul\source\repos\ExamenProjectSolution\ExamenBLLibrary\obj\Debug\ExamenBLLibrary.dll
+C:\Users\ahamed.thamimul\source\repos\ExamenProjectSolution\ExamenBLLibrary\obj\Debug\ExamenBLLibrary.pdb

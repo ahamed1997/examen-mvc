@@ -1,0 +1,76 @@
+﻿@model ExamenProject.Models.ExamenDataModel
+
+@{
+
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Payment</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    @using (Html.BeginForm())    {
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        
+            <div class="login-form" style="margin-left:15%;margin-right:15%;margin:5%">
+
+                <h2>CREDIT CARD/DEBIT CARD</h2><br />
+                <div>
+                    <h5>CARD HOLDER NAME</h5>
+
+                    <div>
+                        <div>
+                            <input type="text" placeholder="Name of Card holder" required/>
+                            
+                        </div>
+                    </div><br/>
+                    <h5>CARD NUMBER</h5>
+                    <div>
+                        <div>
+                            <input type="text" name="pincode" maxlength="16" value="XXXX-XXXX-XXXX-XXXX" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'XXXX-XXXX-XXXX-XXXX';}" pattern="\d{16}" required />
+                        </div>
+                    </div><br />
+                    <h5>Select the Test Model</h5>
+                    <div>
+                        <div>
+
+                            @Html.DropDownListFor(model => model.Testmodel, Model.Testmodels)
+                            @Html.ValidationMessageFor(model => model.Testmodel, "*", new { @class = "text-danger", })
+                        </div>
+                    </div><br />
+                    <h5>EXPIRY DATE</h5>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <input type="number" class="text_box" typeof="text" value="" min="01" max="12" pattern="\d{ }" placeholder="Month" required />
+                            <input type="number" class="text_box" typeof="text" value="" min="2019" pattern="\d{ }" placeholder="Year" required />
+                        </div>
+                    </div><br />
+                    <h5>CVV</h5>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <input type="text" name="pincode" maxlength="3" value="xxx"
+                                   onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'xxx'; else { this.value = Text }" pattern="\d{3}" required />
+                        </div>
+                    </div>
+                    
+                </div><br />
+                      <div style="align-content:center;text-align:center">
+                          <input type="submit" name="submitbutton" value="Register" />
+                          <input type="submit" name="submitbutton" value="Cancel" />
+                      </div>
+                
+                @*<input type="submit" value="SUBMIT">*@
+            </div>
+        
+        @ViewBag.Message
+  }
+    </body>    
+ 
+</html>

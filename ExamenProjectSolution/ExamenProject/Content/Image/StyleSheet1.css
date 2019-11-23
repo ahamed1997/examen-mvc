@@ -1,0 +1,46 @@
+﻿
+body, html {
+    height: 100%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url('Image/logo4.jpg');
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+body {
+    background-image: url('Image/logo4.jpg');
+    margin: 0px;
+    font-family: 'Ubuntu', sans-serif;
+    background-size: 100% 110%;
+}
+
+.button {
+    padding: 3px 7px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+.button:hover {
+    background-color: #2b7d89;
+}
+
+.button:active {
+    background-color:Background;
+   box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}

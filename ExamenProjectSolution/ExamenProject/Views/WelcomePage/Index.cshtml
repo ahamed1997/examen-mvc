@@ -1,0 +1,92 @@
+﻿@model ExamenProject.Models.ExamenDataModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/Content/Image/StyleSheet1.css" rel="stylesheet" />
+    <link href="~/Content/Image/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/Image/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/Image/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Image/owl-carousel.css" rel="stylesheet" />
+    <link href="~/Content/Image/lightbox.css" rel="stylesheet" />
+    <link href="~/Content/Image/hero-slider.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="/w3css/3/w3.css">*@
+    @*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">*@
+    <title>Index</title>
+</head>
+<body style="background-color:black">
+    @using (Html.BeginForm())
+    {
+
+        <header class="header" style="background-color:black">
+            <div style="background-color:black">
+                <table align="right">
+                    <tr>
+                        <td style="color:#000000">
+                            <input type="submit" name="submitButton" class="button" value="Log In" />
+                        </td>
+                        <td>
+                            <input type="submit" name="submitButton" class="button" value="Sign Up" />
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </header>
+        <img src="~/Content/Image/logo4.jpg" style="width:100%" />
+       @ViewBag.ErrorMessage 
+
+
+    <footer style="background-color:gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <div class="logo">
+                        <a class="logo-ft scroll-top" href="#"><h2><em>E</em>xamen</h2></a>
+                        <p>
+                            Copyright &copy; 2019 Examen
+                            <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="location">
+                        <h4>Location</h4>
+                        <ul>
+                            <li>46 Raffles Ave, <br>India 600002</li>
+                            <li>12 Republic Blvd, <br>Singapore 038975</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <div class="contact-info">
+                        <h4>More Info</h4>
+                        <ul>
+                            <li><em>Phone</em>: +91-98761-04536</li>
+                            <li><em>Email</em>: help@examen.co</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <div class="connect-us">
+                       
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    }
+
+</body>
+</html>
+
+
+

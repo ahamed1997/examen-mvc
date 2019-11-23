@@ -1,0 +1,43 @@
+﻿@model ExamenProject.Models.ExamenDataModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ExamRegisterResult</title>
+    <link href="~/Content/StyleSheetforLogIn.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Home", "WelcomePage", FormMethod.Post))
+        {
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="login">
+                Profile : @ViewBag.Profile<br/>
+                <div class="login-form" style="border-radius:3px 6px;color:white">
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            @ViewBag.Message
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <input type="submit" name="submitbutton" value="Back" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        }
+    </div>
+</body>
+</html>

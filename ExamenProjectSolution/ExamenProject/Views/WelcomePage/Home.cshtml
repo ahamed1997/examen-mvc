@@ -1,0 +1,78 @@
+﻿@model ExamenProject.Models.ExamenDataModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/StyleSheetforLogIn.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/JavaScript1.js"></script>
+    <title>Home</title>
+</head>
+<body onload="countdown();">
+    @using (Html.BeginForm())
+    {
+        <header class="header" style="background-color:black">
+            <div style="background-color:black">
+                <table align="right">
+                    <tr>
+                        <td style="color:#000000">
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" name="submitButton" class="button" value="Log Out" />
+                                    </div>
+                                </div>
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>
+        </header>
+        <div class="login">
+            <div class="login-form" style="color:white">
+                <h2>@ViewBag.WelcomeMsg</h2>
+            </div>
+        </div>
+        <div class="login-form" style="border-radius:3px 6px;color:white">
+
+            <div>
+                <div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <br />
+                            <br />
+                            <br />
+                            <input type="submit" name="submitbutton" value="Register for Exam" style="width:230px;font-family:Ebrima" /><br /><br />
+                            <br />
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <br />
+                            <input type="submit" name="submitbutton" value="Take Test" style="width:230px;font-family:Ebrima" /><br /><br />
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <br /><br /><br />
+                            <input type="submit" name="submitbutton" value="View Profile" style="width:230px;font-family:Ebrima" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    }
+</body>
+</html>

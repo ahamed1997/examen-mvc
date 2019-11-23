@@ -1,0 +1,116 @@
+﻿@model ExamenProject.Models.ExamenDataModel
+
+
+    @{
+       Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @*<script src="~/Scripts/JavaScript1.js"></script>*@
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/JavaScript2.js"></script>
+    <title>TakeTest</title>
+    @*<script type="text/javascript">
+
+            // Total seconds to wait
+            var seconds = 150;
+
+            function countdown() {
+                seconds = seconds - 1;
+                if (seconds < 0) {
+
+                    window.location = "@Url.Action( "TestFinishView","HomePageExamen")";
+                } else {
+
+                    document.getElementById("countdown").innerHTML = seconds;
+
+                    window.setTimeout("countdown()", 1000);
+                }
+            }
+
+
+            countdown();
+
+        </script>*@
+<script>
+    $(document).ready(function () {
+        $("#btnmsg").click(function () {
+            if ($('input[type=radio][name=Options]').is(':checked')) {
+                alert("it's checked");
+                // put here your ajax code
+                //$.ajax({
+                //Do something});
+
+            } else {
+                alert("it's not checked");
+            }
+
+        });
+    });
+</script>
+
+
+</head>
+<body style="background-color:white" onload="countdown();">
+    @using (Html.BeginForm("TakeTest", "HomePageExamen", FormMethod.Post))
+    {
+        <h3 style="color:red">
+            Seconds Left : <span id="countdown">150</span> seconds
+        </h3>
+
+        <div>
+            <h2> Profile:  @ViewBag.Message</h2>
+
+
+
+            @*@for (int i = 0; i < Model.Examens.Count; i++)
+        {
+            @Html.DisplayFor(x => x.Examens[i].Sno)
+            <a>.</a>
+            @Html.DisplayFor(x => x.Examens[i].Questions)
+            <br />
+
+
+            @Html.RadioButtonFor(x => x.Examens[i].Options, "Option1")
+            <span>@Model.Examens[i].Option1</span>
+            <br />
+            @Html.RadioButtonFor(x => x.Examens[i].Options, "Option2")
+            <span>@Model.Examens[i].Option2</span>
+            <br />
+            @Html.RadioButtonFor(x => x.Examens[i].Options, "Option3")
+            <span>@Model.Examens[i].Option3</span>
+            <br />
+            @Html.RadioButtonFor(x => x.Examens[i].Options, "Option4")
+            <span>@Model.Examens[i].Option4</span>
+            <br />
+        }*@
+
+            @Html.DisplayFor(model => model.Sno)<br />
+            <a>.</a>
+
+            @Html.DisplayFor(model => model.Questions)<br />
+            <br />
+            @Html.RadioButtonFor(model => model.Options, "Option1")<span>@Model.Option1</span>
+                                                                   <br />
+
+            @Html.RadioButtonFor(model => model.Options, "Option2")<span>@Model.Option2</span><br />
+        
+            @Html.RadioButtonFor(model => model.Options, "Option3")<span>@Model.Option3</span>
+                                                                   <br />
+            @Html.RadioButtonFor(model => model.Options, "Option4")<span>@Model.Option4</span><br />
+            
+            @Html.ValidationMessageFor(m => m.Options, "", new { @class = "error" })
+            <br /><br />
+            <input type="submit" name="submitbutton" value="Next" />
+            <br /><br /><br />
+        </div>
+        @ViewBag.Message
+
+    }
+</body>
+</html>

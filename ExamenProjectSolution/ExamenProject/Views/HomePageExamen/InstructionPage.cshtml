@@ -1,0 +1,77 @@
+﻿@model ExamenProject.Models.ExamenDataModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="~/Content/Image/Instructionpage.css" rel="stylesheet" />
+    <title>InstructionPage</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+         {
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div style="margin:10%">
+                <div class="login-header">
+                    <h4><b>PLEASE REFER FOLLOWING DETAILS REGARDING YOUR ONLINE EXAM.: </b></h4>
+
+                </div>
+                <div>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <p><b>TEST TIME : 10 MINNUTES</b></p>
+                            <p><b>MARKS FOR EACH QUESTION : 1</b></p>
+                            <br />
+                        </div>
+                    </div>
+                    <h3><b>Before the examination starts</b></h3>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <ul>
+                                <li>Arrive at the examination venue at least 15 minutes before the start of the examination / 35 minutes before a digital examination.</li>
+                                <li><b>Law:</b> The examination starts at the moment the book control begins, and you must therefore be present by 8.20 a.m. for regular written examinations and 8.10 a.m. at digital examinations.</li>
+                                <li>When using a laptop at digital examinations, the laptop has to be set up as soon as possible. If you are taking a law exam, the laptop must be set up before the book control.</li>
+                                <li>Coats, backpacks, bags, etc. must be placed as directed. Mobile phones, mp3 players, smartwatches and other electronic devices must be turned off and put away, and cannot be stored in coats or pockets.</li>
+                                <li>If support material, other than that which is specifically permitted, is found at or by the desk, it may be treated as an attempt to cheat and relevant procedures for cheating will be followed. </li>
+                                <li>The head invigilator will provide information about examination support materials that you are permitted to use during the examination. All dictionaries must be approved by the faculty before the exam and will be handed out in the exam venue by the invigilators.</li>
+                                <li><b>Humanities–</b> Dictionaries must be approved by the faculty at the latest three days before the exam. If you are to bring your own examination support materials directly to the exam venue, the department will provide information about this in advance.</li>
+                                <li><b>Law– </b>Only examination materials approved by the faculty are permitted. Book control takes place in the exam venue before the start of the examination.</li>
+                                <li><b>Psychology -</b> Dictionaries must be approved by the faculty Information Centre at the latest one week before the exam. If you don’t have a suitable dictionary, you may apply to loan one from the faculty, given that there are dictionaries available in your language.</li>
+                                <li></li>
+                            </ul>
+                            <br />
+                        </div>
+                    </div>
+                    <h3><b>During the examination</b></h3>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <ul>
+                                <li>You are required to comply with the directions given by the head invigilator at the examination venue.</li>
+                                <li>Your student identity card or other valid photo identification must be visible on your desk during the entire examination (Student ID App with photo is not valid as identification).</li>
+                                <li>You may keep food and drink on or by the desk during the entire examination. You may eat and drink whenever you want.</li>
+                                <li>If you experience technical problems during a digital examination, you must immediately contact one of the invigilators. The invigilator will call for technical support. Failure to report such technical problems might be treated as cheating or an attempt to cheat.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div style="align-content:center">
+                        <input type="submit" name="submitbutton" value="Cancel" />
+                        <input type="submit" name="submitbutton" value="APTITUDE MODULE" />
+                        <input type="submit" name="submitbutton" value="TECHNICAL MODULE" />
+                    </div>
+                    <br /><br />
+                          <b>@ViewBag.Message</b>
+                </div>
+            </div>
+            
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿@model ExamenProject.Models.ExamenDataModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @*<script src="~/Scripts/JavaScript1.js"></script>*@
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/JavaScript2.js"></script>
+    <title>TakeTest</title>
+    
+
+</head>
+<body style="background-color:white" onload="countdown();">
+    @using (Html.BeginForm())
+    {
+        <h3 style="color:black">
+            Seconds Left : <span id="countdown">150</span> seconds
+        </h3>
+        <div>
+            <input id="Next" type="submit" name="submitbutton" value="Next" />
+        </div>
+    }
+</body>
+</html>

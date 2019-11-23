@@ -1,0 +1,36 @@
+﻿@model ExamenProject.Models.ExamenDataModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/StyleSheetforLogIn.css" rel="stylesheet" />
+    <title>RegisterSuccessView</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <div class="login-form" style="border-radius:3px 6px;color:white">
+
+           <div class="form-group">
+              <div class="form-horizontal">
+            
+            <div class="form-group">
+                
+                    <h1>
+                        REGISTERED SUCCESSFULLY..!!!!
+                    </h1>
+                    <input type="submit" name="submitButton" value="Back" />
+                </div>
+            </div>
+        </div>
+            </div>
+                }
+
+</body>
+</html>

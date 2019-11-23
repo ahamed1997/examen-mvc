@@ -1,0 +1,38 @@
+﻿@model ExamenProject.Models.ExamenDataModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/StyleSheetforLogIn.css" rel="stylesheet" />
+    <title>TestFinishView</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="login">
+            <div class="login-header">
+
+            </div>
+            <div class="login-form" style="border-radius:3px 6px;color:white">
+                <h2>YOU COMPLETED THE EXAMEN TEST</h2>
+                <div class="form-group">
+
+                    <div style="align-content:center"><br />
+                        <h3>Your SCORED : @ViewBag.Scores / 10</h3>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" name="submitbutton" value="Finish" />
+        </div>
+        }
+        </div>
+</body>
+</html>

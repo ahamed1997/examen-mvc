@@ -1,0 +1,89 @@
+﻿@model ExamenProject.Models.ExamenDataModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = null;
+}
+
+    <html>
+    <head>
+
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width" />
+        <title>LogIn</title>
+    </head>
+    <body>
+
+        <div>
+            <div>
+                @using (Html.BeginForm())
+                {
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="login" style="margin-left:15%;margin-right:15%;margin-top:5%">
+                        <div class="login-header">
+                            <h3>REGISTRATION</h3>
+                        </div>
+                        <div class="login-form" style="border-radius:3px 6px;">
+                            <br />
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter the Name" } })
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter the Phone Number" } })
+                                    @*@Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })*@
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter the Email" } })
+                                    @*@Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })*@
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter the Username" } })
+                                    @*@Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })*@
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter the Password" } })
+                                    @*@Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })*@
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.Confirmpassword, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter the Confirm Password" } })
+                                    @*@Html.ValidationMessageFor(model => model.Confirmpassword, "", new { @class = "text-danger" })*@
+                                </div>
+                            </div>
+
+                            <input type="submit" name="submitButton" value="Submit" />
+
+
+                            @ViewBag.Message
+                        </div>
+                    </div>
+                    <input type="submit" name="submitButton" value="Cancel" />
+                }
+
+            </div>
+            </div>
+        </body>
+</html>

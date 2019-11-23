@@ -1,0 +1,36 @@
+﻿body, html {
+    height: 100%;
+    background-image: url('Image/logo4.jpg');
+}
+
+.bg {
+    /* The image used */
+    background-image: url('Image/logo4.jpg');
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+body {
+    background-image: url('Image/logo4.jpg');
+    margin: 0px;
+    font-family: 'Ubuntu', sans-serif;
+    background-size: 100% 110%;
+}
+@media only screen and (min-width : 150px) and (max-width : 530px) {
+    .login-form h3 {
+        text-align: center;
+        margin: 0;
+    }
+
+    .sign-up, .no-access {
+        margin: 10px 0;
+    }
+
+    .login-button {
+        margin-bottom: 10px;
+    }

@@ -1,0 +1,65 @@
+﻿@model ExamenProject.Models.ExamenDataModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MainView</title>
+    <script type="text/javascript">
+
+            // Total seconds to wait
+            var seconds = 150;
+
+            function countdown() {
+                seconds = seconds - 1;
+                if (seconds < 0) {
+
+                    window.location = "@Url.Action("TestFinishView", "HomePageExamen")";
+                } else {
+
+                    document.getElementById("countdown").innerHTML = seconds;
+
+                    window.setTimeout("countdown()", 1000);
+                }
+            }
+
+
+            countdown();
+
+    </script>
+    <script type="text/jscript">
+        $('onclick').load('/HomePageExamen/PatialsView’);
+    </script>
+
+</head>
+<body>
+    <div>
+        <h3 style="color:red">
+            Seconds Left : <span id="countdown">150</span> seconds
+        </h3>
+    </div>
+    
+        <div>
+            <div>
+                Down is Partial View
+            </div>
+            <br />
+            <br />
+           
+            <div>
+                @{Html.RenderPartial("PartialsView",Model);
+                }
+            </div>
+            
+    
+        
+
+    </div>
+</body>
+</html>
+
